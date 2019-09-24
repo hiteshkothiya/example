@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<title>FlexBox - HoverEfect</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+    font-style: normal;    
+    font-size: 18px;
+    line-height: 1.6;
+    font-family: Lato, sans-serif;
+    text-align: left;
+    color: #505456;
+    margin: 0;
+    padding: 0;
+}
+*{
+    box-sizing: border-box;
+}
+.projects-list {
+    display: flex;
+}
+.projects-item {
+    width: 25%;
+    margin: 0;
+    position: relative;
+}
+.post-terms{
+    font-size: 1rem;
+}
+.project-entry-title{
+    font-size: 1.5rem;
+}
+.projects-item a{
+    color: #fff;
+    text-decoration: none;
+}
+figure {
+    margin: 0;
+    padding: 0;
+}
+.featured-image img {
+    width: 100%;
+    font-family:'object-fit: cover';
+}
+.hover-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 5%;
+    opacity: 0;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    overflow: hidden;
+    text-align: center;
+    background-color: rgba(0, 182, 255, 0.6);
+}
+.hover-content > * {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+.projects-item:hover .hover-content, .projects-item:hover .hover-content > * {
+    opacity: 1;
+    -webkit-transform:scale(1) translate3d(0,50%,0);
+    transform:scale(1) translate3d(0,50%,0);
+}
+.post-terms, .project-entry-title {
+    display: block;
+}
+</style>
+</head>
+<body>
+<div class="projects-list">
+    <div class="projects-item">        
+        <figure class="featured-image"><img src="https://www.flightnetwork.com/blog/wp-content/uploads/2017/11/Navagio_Header-1.jpg" /></figure>
+        <div class="hover-content">
+            <div class="post-terms"><a href="#">First Block</a></div>
+            <h4 class="project-entry-title"><a href="#">This is a First Block</a></h4>
+        </div>
+    </div>
+    <div class="projects-item">
+        <figure class="featured-image"><img src="https://www.flightnetwork.com/blog/wp-content/uploads/2017/11/Hyams_Header.jpg" /></figure>
+        <div class="hover-content">
+            <div class="post-terms"><a href="#">Second Block</a></div>
+            <h4 class="project-entry-title"><a href="#">This is a Second Block</a></h4>
+        </div>
+    </div>
+    <div class="projects-item">
+        <figure class="featured-image"><img src="https://www.flightnetwork.com/blog/wp-content/uploads/2017/11/Maya-Bay_Header.jpg" /></figure>
+        <div class="hover-content">
+            <div class="post-terms"><a href="#">Third Block</a></div>
+            <h4 class="project-entry-title"><a href="#">This is a Third Block</a></h4>
+        </div>
+    </div>
+    <div class="projects-item">
+        <figure class="featured-image"><img src="https://www.flightnetwork.com/blog/wp-content/uploads/2017/11/Diani_Header.jpg" /></figure>
+        <div class="hover-content">
+            <div class="post-terms"><a href="#">Fourth Block</a></div>
+            <h4 class="project-entry-title"><a href="#">This is a Fourth Block</a></h4>
+        </div>
+    </div>
+</div>
+</body>
+</html>
