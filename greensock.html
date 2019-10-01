@@ -1,0 +1,85 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<title>GSAP - GreenSockAnimationPlatform</title>
+<style>
+body{
+    padding: 5em;
+    color: black;
+}
+*{
+    box-sizing: border-box;
+}
+h1{
+    font-size: 4em;
+    color: #0e0e0e;
+    line-height: 1em;
+}
+button{
+    font-size: 1em;
+    padding: 0.5em 3em;
+    cursor: pointer;
+}
+.panel{
+    position: absolute;
+    width: 50%;
+    right: 0;
+    bottom: 0;
+    background: #c6d1ff;
+    padding: 25% 5%;
+    transform: scaleY(0);
+    transform-origin: bottom;
+}
+.panel img{
+    width: 20%;
+    float: left;
+    margin: 0 2em 0 0;
+    opacity: 0;
+    transform: translateY(-200px);
+}
+.panel p{
+    font-size: 1em;
+    opacity: 0;
+}
+.box{
+    width: 65%;
+    height: 30%;
+    position: absolute;
+    top: 25%;
+    left: -8%;
+    border: 5px solid #00af5d;
+    opacity: 0;
+    z-index: -1;
+    transform: scale(0);
+}
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+</head>
+<body>
+<h1>Green Sock</h1>
+<button id="play">Play</button>
+<div class="panel">
+    <img src="images/idea.png" class="light">
+    <p>Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.</p>
+    <div class="box"></div>
+</div>
+
+<script>
+    var tl = new TimelineMax({
+        paused: true,
+        onComplete: function(){
+            this.reverse();
+        }
+    });
+
+    tl.to('.panel', 0.5, {scaleY:1, height: '100vh', ease: Circ. easeOut});
+    tl.to('.light', 1, {opacity:1, y:0, delay:1, ease: Back. easeOut.config( 1.7)}, .5);
+    tl.to('p', 1, {opacity:1, y:20});
+    tl.to('.box', 2, {opacity:1, scale:1, delay:2, ease: Elastic. easeOut.config( 1, 0.3)}, "-=3.5");
+    
+    document.getElementById("play").addEventListener('click', function(){
+        tl.play();
+    });
+</script>
+</body>
+</html>
