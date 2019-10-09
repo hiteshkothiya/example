@@ -1,0 +1,144 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<title>Transitions Effect</title>
+<meta content='width=device-width, initial-scale=1.0' name='viewport' />
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800|PT+Sans:400,700|Expletus+Sans:400,500,600,700|Poiret+One' rel='stylesheet' type='text/css'>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel='stylesheet' type='text/css' />
+<link href="css/animations.min.css" rel="stylesheet" type="text/css" media="all" />
+<style>
+body, html{
+    margin: 0;
+    padding: 0;
+}
+a, .btn {
+    -webkit-transition: all 0.3s ease-out 0s;
+    -moz-transition: all 0.3s ease-out 0s;
+    -ms-transition: all 0.3s ease-out 0s;
+    -o-transition: all 0.3s ease-out 0s;
+    transition: all 0.3s ease-out 0s;
+}
+*, ::after, ::before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+h3, p{
+    margin: 0;
+    padding: 0.5em 0;
+}
+.container {
+    width: 100%;
+    padding: 2em 8%;
+}
+.main-title h1{
+    display: block;
+    text-align: center;
+}
+.main-title h1::after {
+    content: "\f111";
+    font-family: 'FontAwesome';
+    font-size: 12px;
+    line-height: 0;
+    color: #00c0c7;
+    display: block;
+    height: 1px;
+    padding: 0;
+    width: 250px;
+    background: #cccccc;
+    margin: 20px auto;
+}
+
+.floatRight{
+    float: right;
+}
+
+/* Box css */
+.box {
+	margin: 0px 0;
+	padding: 1em;
+	background: #FFF;
+	text-align: left;
+	cursor: pointer;
+	border: 1px solid #cccccc;
+	margin-bottom: 40px;
+}
+.box a {
+	color: #414141;
+	float: right;
+	border: 1px solid #CCC;
+	background: #FFF;
+	text-decoration: none;
+	font-size: 16px;
+	position: relative;
+	bottom: 0px;
+	right: 20px;
+}
+.box a span:first-child {
+	background-color: #FFF;
+	display: inline-block;
+	padding: 5px 18px;
+	position: relative;
+	margin-left: -12px;
+	left: 12px;
+	margin-right: -35px;
+	-webkit-transition: margin-right 0.8s;
+	-moz-transition: margin-right 0.8s;
+	transition: margin-right 0.8s
+}
+.box a span:first-child:hover {
+	margin-right: 0px
+}
+.box a span:last-child {
+	color: #FFF;
+	background-color: #00c0c7;
+	display: inline-block;
+	padding: 5px 17px 5px 20px;
+	text-align: right;
+}
+.box:hover {
+	border: 1px solid #00c0c7;
+}
+.box:hover a {
+	color: #00c0c7;
+	border: 1px solid #00c0c7;
+}
+.box:hover a span:first-child {
+	margin-right: 0px
+}
+
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="main-title">
+            <h1>Main title here</h1>
+        </div>
+        <div class="clearfix mb-20"></div>
+
+        <div class="box animate-in" data-anim-type="fade-in-left" data-anim-delay="100">
+            <h3>This is a title here</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque iste ea, commodi voluptatem odio velit fugit aut vitae architecto, cumque facilis unde adipisci enim voluptatibus quis molestiae corporis eum tempora.</p>
+            <a href="#"><span>Read More</span>
+            <span><i class="fa fa-angle-right"></i></span></a>
+        </div>
+        <div class="box animate-in" data-anim-type="fade-in-right" data-anim-delay="100">
+            <h3>This is a title here</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque iste ea, commodi voluptatem odio velit fugit aut vitae architecto, cumque facilis unde adipisci enim voluptatibus quis molestiae corporis eum tempora.</p>
+            <a href="#"><span>Read More</span>
+            <span><i class="fa fa-angle-right"></i></span></a>
+        </div>
+        <div class="box animate-in" data-anim-type="fade-in-down" data-anim-delay="100">
+            <h3>This is a title here</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque iste ea, commodi voluptatem odio velit fugit aut vitae architecto, cumque facilis unde adipisci enim voluptatibus quis molestiae corporis eum tempora.</p>
+            <a href="#"><span>Read More</span>
+            <span><i class="fa fa-angle-right"></i></span></a>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="js/animations.min.js" type="text/javascript"></script> 
+<script src="js/appear.min.js" type="text/javascript"></script>
+</body>
+</html>
